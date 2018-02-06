@@ -1,0 +1,88 @@
+/* vue 过渡动画 */
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-active {
+  transform: translateX(10px);
+  opacity: 0;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
+/* vue 动态组件过渡 */
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: opacity .3s ease;
+}
+.component-fade-enter, .component-fade-leave-active {
+  opacity: 0;
+}
+/*更改默认滚动条样式*/
+scrollbar{
+  width: 14px;
+}
+::-webkit-scrollbar { 
+  width: 14px; 
+} 
+scrollbar-track{
+  background: transparent; 
+}
+::-webkit-scrollbar-track { 
+  background: transparent;
+} 
+scrollbar-thumb{
+  border-radius: 14px; 
+  background: #c3cdd2; 
+}
+::-webkit-scrollbar-thumb { 
+  border-radius: 14px; 
+  background: #c3cdd2; 
+}
+@-moz-document{
+  scrollbar{
+    width: 14px;
+  }
+  scrollbar-track{
+    background: transparent; 
+  }
+  scrollbar-thumb{
+    border-radius: 14px; 
+    background: #c3cdd2;
+  }
+}
+/*侧边栏功能区*/
+.sidebar_container{
+	position: absolute;
+	top: 0;
+	left: 100px;
+	height: 100%;
+	width: 400px;
+	background: white;
+	z-index: 10;
+}
+@media screen and (max-width: 992px){
+  .sidebar_container{
+    left: 0px;
+  }
+}
+/*工作计划*/
+.plan{
+  height: 100%;
+  overflow-y: auto;
+  background: #e4e8ea;
+  position: relative;
+  padding: 15px;
+}
+/*项目*/
+.project{
+  height: 100%;
+  overflow-y: auto;
+  background: #e4e8ea;
+  position: relative;
+  padding: 15px;
+}
